@@ -1,2 +1,2 @@
 # map-object
-Object with a map function
+Create a map function for an object prototype.
