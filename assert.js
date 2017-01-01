@@ -1,6 +1,7 @@
 /**
- * @param [boolean] test
- * @param [string]  message
+ * @param  [boolean] test
+ * @param  [string]  message
+ * @return [string]          Test result.
  */
 module.exports = (test, message) => {
 
