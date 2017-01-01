@@ -1,8 +1,17 @@
+
+/**
+ * @param  [object] constructor Constructor function
+ * @return [object]             Prototype functions
+ */
 module.exports = (constructor) => {
         
     let p = {
         
-        // https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+        /**
+         * reference: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
+         * @param  [function] fn
+         * @return [object]
+         */
         map(fn) {
             
             if (typeof fn !== 'function') {
