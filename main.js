@@ -6,7 +6,7 @@ function A() {
     this.one = 1;
 }
 
-A.prototype = Object.create(Object.assign({}, proto(A)));
+A.prototype = Object.assign({}, proto(A));
 
 let a = new A();
 
