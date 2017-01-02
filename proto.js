@@ -22,21 +22,19 @@ module.exports = (constructor) => {
                 copy = Object(this);
             
             for (let k in copy) {
-                if (this.hasOwnProperty(k)) {
-                 
-                    if (typeof copy[k] === 'function') {
-                        newObject[k] = copy[k];
-                    } else {
-                        Object.defineProperty(newObject, k, {
-                            value: fn.call(newObject, copy[k]),
-                            writable: true,
-                            enumerable: true,
-                            configurable: true
-                        });
-                    }
+
+                if (typeof copy[k] === 'function') {
+                    newObject[k] = copy[k];
+                } else {
+                    Object.defineProperty(newObject, k, {
+                        value: fn.call(newObject, copy[k]),
+                        writable: true,
+                        enumerable: true,
+                        configurable: true
+                    });
                 }
             }
-
+            
             return newObject;
         }
     };
