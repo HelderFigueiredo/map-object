@@ -4,23 +4,23 @@
  * @return [object]             Prototype functions
  */
 module.exports = (constructor) => {
-        
+
     let p = {
-        
+
         /**
          * reference: https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/Array/map
          * @param  [function] fn
          * @return [object]
          */
         map(fn) {
-            
+
             if (typeof fn !== 'function') {
                 throw new TypeError(fn + ' is not a function');
             }
 
             let newObject = Object(constructor),
                 copy = Object(this);
-            
+
             for (let k in copy) {
 
                 if (typeof copy[k] === 'function') {
@@ -34,7 +34,7 @@ module.exports = (constructor) => {
                     });
                 }
             }
-            
+
             return newObject;
         }
     };

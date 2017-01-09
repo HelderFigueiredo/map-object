@@ -9,7 +9,7 @@ module.exports = (test, message) => {
         message = message.toString();
     }
 
-    if (!!test) {
+    if (test) {
         return '[✓] ' + message;
     }
 
